@@ -31,12 +31,10 @@ header {
     margin: 0;
     font-size: 22px;
     font-weight: 900;
-    cursor: pointer;
 }
 
 .left_area span {
     color: #1DC4E7;
-    cursor: pointer;
 }
 
 .login_btn, .register_btn {
@@ -50,9 +48,11 @@ header {
 .right_area {
     color: #19B3D3;
     float: right;
-    margin-top: -25px;
+    margin-top: -30px;
     margin-right: 40px;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .right_area input {
@@ -83,6 +83,17 @@ textarea:-moz-placeholder { color: #FFF; }
 .register_btn:hover {
     color: #FFF;
     transition: 0.5s;
+}
+
+.right_area_profile {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    margin-top: -5px;
+    margin-right: 10px;
+    background: url(img_profile.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
 .sidebar {
