@@ -1,0 +1,23 @@
+{
+  "name": "projeto_dhfitness",
+  "version": "1.0.0",
+  "description": "Projeto Integrador - DH Fitness",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "author": "Marcos Spano, Aluizio Catão, Cletche Nafantchamna e Josias Silva",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "http-errors": "^1.8.0",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.3.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "sequelize-cli": "^6.2.0"
+  }
+}

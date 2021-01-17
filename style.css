@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #22242A;
+    padding-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #19B3D3
+}
+
+header {
+    top: 0;
+    position: fixed;
+    background: #22242A;
+    padding: 20px;
+    width: 100%;
+    height: 30px;
+}
+
+.left_area h3 {
+    color: #FFF;
+    margin: 0;
+    font-size: 22px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.left_area span {
+    color: #1DC4E7;
+    cursor: pointer;
+}
+
+.login_btn, .register_btn {
+    padding: 5px;
+    color: #19B3D3;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.right_area {
+    color: #19B3D3;
+    float: right;
+    margin-top: -25px;
+    margin-right: 40px;
+
+}
+
+.right_area input {
+    color: #FFF;
+    margin-right: 10px;
+    width: 300px;
+    padding: 5px;
+    background:  #2F323A;
+    opacity: 0.8;
+    border: 1px solid #FFF;
+    border-radius: 5px;
+}
+
+.right_area i {
+    color: #FFF;
+    margin-right: 30px;
+}
+
+::-webkit-input-placeholder { color: #FFF; }
+input:-moz-placeholder { color: #FFF; }
+textarea:-moz-placeholder { color: #FFF; }
+
+.login_btn:hover {
+    color: #FFF;
+    transition: 0.5s;
+}
+
+.register_btn:hover {
+    color: #FFF;
+    transition: 0.5s;
+}
+
+.sidebar {
+    background: #2F323A;
+    margin-top: 0px;
+    padding-top: 30px;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    transition: 0.5s;
+    transition-property: left;
+}
+
+.sidebar a {
+    color: #FFF;
+    display: block;
+    width: 100%;
+    line-height: 50px;
+    text-decoration: none;
+    padding-left: 25px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transition-property: background;
+}
+
+.sidebar a:hover {
+    background: #19B3D3;
+}
+
+.sidebar i {
+    padding-right: 10px;
+}
+
+label #sidebar_btn{
+    z-index: 1;
+    color: #FFF;
+    position: fixed;
+    cursor: pointer;
+    left: 220px;
+    font-size: 20px;
+    margin: 5px 0;
+    transition: 0.5s;
+    transition-property: color;
+}
+
+label #sidebar_btn:hover {
+    color: #19B3D3;
+}
+
+#check:checked ~ .sidebar {
+    left: -190px;
+}
+
+#check:checked ~ .sidebar a span {
+    display: none;
+}
+
+#check:checked ~ .sidebar a {
+    font-size: 20px;
+    margin-left: 180px;
+    width: 70px;
+}
+
+.content {
+    display: flex;
+    overflow: hidden;
+    background: url(img_bg_1.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    margin-top: 70px;
+    transition: 0.5s;
+    transition-property: margin-left;
+}
+
+.content .content_card {
+    background: #182B3c;
+    width: 180px;
+    height: 270px;
+    border-radius: 15px 15px;
+    margin: 250px 0 0 60px;
+}
+
+.content .content_card .content_card_image {
+    background: url(img_bg_2.jpg);
+}
+
+.content .content_card .content_card_text h4 {
+    text-align: center;
+    color: #FFF;
+}
+
+#check:checked ~ .content {
+    margin-left: 60px;
+}
+
+#check {
+    display: none;
+}
+
+.content .content_enter {
+    max-width: 400px;
+    font-family: 'Poppins', sans-serif;
+    color: #FFF;
+    padding-top: 30px;
+    margin-left: 300px;
+    transition: 0.5s;
+    transition-property: margin-left;
+}
+
+#check:checked ~ .content .content_enter {
+    margin-left: 60px;
+    max-width: 500px;
+}
+
+.content .content_enter span {
+    font-size: 40px;
+    font-weight: 700;
+    color: #800000;
+}
+
+.content .content_enter ul {
+    padding-left: 0;
+}
+
+.content .content_enter ul li {
+    display: block;
+    line-height: 40px;
+    font-weight: 600;
+}
+
+.content .content_enter i {
+    padding-right: 20px;
+}
+
+
+
+.about {
+    padding-top: 70px;
+    max-width: 1000px;
+    padding-bottom: 20px;
+    margin-left: 300px;
+    transition: 0.5s;
+    transition-property: margin-left;
+}
+
+.about .about_text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #CCC;
+    text-align: justify;
+}
+
+#check:checked ~ .about {
+    margin-left: 200px;
+}
+
+.unity {
+    padding-top: 70px;
+    max-width: 1000px;
+    padding-bottom: 80px;
+    margin-left: 300px;
+    transition: 0.5s;
+    transition-property: margin-left;
+}
+
+.unity p, h1 {
+    color: #FFF;
+}
+
+.unity h1 {
+    font-weight: 700;
+}
+
+.unity p {
+    font-size: 13px;
+}
+
+.unity .unity_cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 300px;
+}
+
+.unity .unity_cards .unity_cards_i {
+    width: 220px;
+    background-color:  #2F323A;
+    border-radius: 15px;
+}
+
+.unity .unity_cards .unity_cards_i span {
+    display: block;
+    width: 160px;
+    padding: 5px;
+    background-color: #FFF;
+    border-radius: 15px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.unity .unity_cards .unity_cards_i span:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#check:checked ~ .unity {
+    margin-left: 200px;
+}
+
+footer {
+    background: #22242A;
+    height: 750px;
+    margin-left: 250px;
+    margin-bottom: 0;
+    padding: 40px;
+    transition: 0.5s;
+    transition-property: margin-left;
+}
+
+#check:checked ~ footer {
+    margin-left: 60px;
+}
+
+footer .footer_logo {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+footer .footer_logo h3 {
+    margin: 0;
+    color: #FFF;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.footer_logo span {
+    color: #1DC4E7;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, transparent, #CCC, transparent);
+}
+
+footer .footer_cards {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: #FFF;
+    max-width: 1000px;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+footer .footer_cards h4 {
+    text-transform: uppercase;
+}
+
+footer .footer_cards ul {
+    list-style: none;
+    line-height: 30px;
+    display: inline;
+}
+
+footer .footer_cards ul a:hover {
+    color: #FFF;
+    transition: 0.5s;
+}
+
+footer .footer_inf {
+    font-family: 'Poppins', sans-serif;
+    color: #CCC;
+    font-size: 12px;
+    max-width: 1000px;
+    margin: auto;
+    text-align: justify;
+}
+
+footer .footer_inf h4 {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
