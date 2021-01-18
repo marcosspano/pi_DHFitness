@@ -23,17 +23,25 @@
             </div>
 
             <div class="right_area">
-                <span class="right_area_profile"></span>
+                <span class="right_area_profile" onclick="toggle_right_area_menu();"></span>
                 <span>Usuário DH</span>
             </div>
+
+            <div class="right_area_menu">
+                <h3>Bem-Vindo<br><span>Plano Smart</span></h3>
+                <ul>
+                    <li><i class="far fa-user-circle"></i><a href="#">Editar Perfil</a></li>
+                    <li><i class="fas fa-sign-out-alt"></i>><a href="#">Sair</a></li>
+                </ul>
+            </div>
+
         </header>
 
         <!--Menu Lateral -->
         <div class="sidebar">
-            <a href="#"><i class="fas fa-home"></i><span>Agenda</span></a>
-            <a href="#about"><i class="fas fa-info-circle"></i><span>Contrato</span></a>
-            <a href="#unity"><i class="fab fa-unity"></i><span>Meus Negócios</span></a>
-            <a href="#"><i class="fas fa-donate"></i><span>Notificações</span></a>
+            <a href="#"><i class="far fa-calendar-alt"></i><span>Agenda</span></a>
+            <a href="#about"><i class="fas fa-running"></i><span>Meus Treinos</span></a>
+            <a href="#about"><i class="far fa-money-bill-alt"></i><span>Pagamentos</span></a>
             <a href="#"><i class="fas fa-question-circle"></i><span>Suporte</span></a>
 
         </div>
@@ -46,10 +54,7 @@
 
         </section>
 
-
-
-
-        
+   
         <!-- Rodapé -->
         <footer>
             <div class="footer_logo">
@@ -117,7 +122,12 @@
 
         </footer>
 
-        
+        <script>
+            function toggle_right_area_menu() {
+                const toggleMenu = document.querySelector('.right_area_menu');
+                toggleMenu.classList.toggle('active')
+            }
+        </script>
         
     </body>
 
