@@ -25,7 +25,27 @@
             <div class="right_area">
                 <input type="search" name="search" id="search" placeholder="Pesquisar">
                 <a href="#"><i class="fas fa-search"></i></a>
-                <span><a href="#" class="login_btn">Entrar</a> | <a href="#" class="register_btn">Cadastrar</a></span>
+                <span onclick="toggle_right_area_login();" class="login_btn">Entrar</span> | <span class="register_btn">Cadastrar</span>
+            </div>
+
+            <div class="teste">
+                <div class="right_area_login">
+                    <div class="form">
+                        <h2>DH Fitness <span> | Acesso</span></h2>
+                        <form>
+                            <div class="inputBox">
+                                <input type="text" placeholder="CPF, E-Mail ou Usuário">
+                            </div>
+                            <div class="inputBox">
+                                <input type="password" placeholder="Senha">
+                            </div>
+                            <div class="inputBox">
+                                <input type="submit" value="Entrar">
+                            </div>
+                            <p class="forget"><a href="#">Esqueceu a senha?</a></p>
+                        </form>
+                    </div>
+                </div>
             </div>
         </header>
 
@@ -142,7 +162,12 @@
 
         </footer>
 
-        
+        <script>
+            function toggle_right_area_login() {
+                const toggleLogin = document.querySelector('.right_area_login');
+                toggleLogin.classList.toggle('activeLogin');
+            }
+        </script>
         
     </body>
 
