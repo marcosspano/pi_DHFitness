@@ -408,7 +408,61 @@ label #sidebar_btn:hover {
     padding-right: 20px;
 }
 
+.content .payments_table {
+    width: 100%;
+    background: rgba(13, 27, 48, 0.6);
+    margin-left: 250px;
+    margin-top: 0px;
+    transition: 0.5s;
+    transition-property: margin-left;
+}
 
+#check:checked ~ .content .payments_table {
+    margin-left: 0px;
+}
+
+.content .payments_table .payments_title {
+    color: #FFF;
+    background: rgba(10, 15, 15, 0.5);
+    border-top-color: #FFF;
+    padding-top: 20px;
+}
+
+.content .payments_table .payments_title span {
+    margin-left: 20px;
+}
+
+.content .payments_table table {
+    width: 100%;
+    margin-top: 20px;
+    border-spacing: 10px;
+    font-size: 15px;
+
+}
+
+.content .payments_table table thead {
+    color: #FFF;
+}
+
+.content .payments_table table tbody {
+    color: #FFF;
+    text-align: center;
+}
+
+.content .payments_table .pay {
+    background: rgb(105,105,105);
+    padding: 1px 4px 1px 4px;
+    border-radius: 3px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.content .payments_table .pay_out {
+    background: rgb(112, 235, 143);
+    padding: 1px 4px 1px 4px;
+    border-radius: 3px;
+    font-size: 12px;
+}
 
 .about {
     padding-top: 70px;
