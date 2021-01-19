@@ -408,6 +408,19 @@ label #sidebar_btn:hover {
     padding-right: 20px;
 }
 
+.content .content_register {
+    width: 100%;
+    background: rgba(13, 27, 48, 0.6);
+    margin-left: 250px;
+    margin-top: 0px;
+    transition: 0.5s;
+    transition-property: margin-left;
+}
+
+#check:checked ~ .content .content_register {
+    margin-left: 0px;
+}
+
 .content .payments_table {
     width: 100%;
     background: rgba(13, 27, 48, 0.6);

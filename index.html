@@ -25,7 +25,7 @@
             <div class="right_area">
                 <input type="search" name="search" id="search" placeholder="Pesquisar">
                 <a href="#"><i class="fas fa-search"></i></a>
-                <span onclick="toggle_right_area_login();" class="login_btn">Entrar</span> | <span class="register_btn">Cadastrar</span>
+                <span onclick="toggle_right_area_login();" class="login_btn">Entrar</span> | <span class="register_btn" onclick="content_register();">Cadastrar</span>
             </div>
 
                 <div class="right_area_login">
@@ -213,6 +213,10 @@
             function toggle_right_area_login() {
                 const toggleLogin = document.querySelector('.right_area_login');
                 toggleLogin.classList.toggle('activeLogin');
+            }
+
+            function content_register() {
+                window.location.href = "register.html";
             }
         </script>
         
