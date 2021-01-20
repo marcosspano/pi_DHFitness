@@ -705,6 +705,10 @@ footer .footer_cards ul a:hover {
     transition: 0.5s;
 }
 
+footer .footer_cards i {
+    margin-right: 10px;
+}
+
 footer .footer_inf {
     font-family: 'Poppins', sans-serif;
     color: #CCC;
