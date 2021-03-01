@@ -25,26 +25,27 @@
             <div class="right_area">
                 <input type="search" name="search" id="search" placeholder="Pesquisar">
                 <a href="#"><i class="fas fa-search"></i></a>
-                <span onclick="toggle_right_area_login();" class="login_btn">Entrar</span> | <span class="register_btn" onclick="content_register();">Cadastrar</span>
+                <span onclick="popupToggle()" class="login_btn">Entrar</span> | <span class="register_btn">Cadastrar</span>
             </div>
 
-                <div class="right_area_login">
-                    <div class="form">
-                        <h2>DH Fitness <span> | Acesso</span></h2>
-                        <form>
-                            <div class="inputBox">
-                                <input type="text" placeholder="CPF, E-Mail ou Usuário">
-                            </div>
-                            <div class="inputBox">
-                                <input type="password" placeholder="Senha">
-                            </div>
-                            <div class="inputBox">
-                                <input type="submit" value="Entrar">
-                            </div>
-                            <p class="forget"><a href="#">Esqueceu a senha?</a></p>
-                        </form>
+            <!-- Login -->
+            <div id="popup">
+                <div class="content_popup">
+                    <img src="avatar_login.png">
+                    <h2>Acesso a Administradores</h2>
+                    <p>Inclusão de Alunos, Professores, Planos, etc... </p>
+                    <div class="inputLogin">
+                        <input type="email" placeholder="Entre com seu E-Mail">
+                    </div>
+                    <div class="inputLogin">
+                        <input type="password" placeholder="Entre com sua Senha">
+                    </div>
+                    <div class="inputLogin">
+                        <input type="submit" value="Entrar">
                     </div>
                 </div>
+                <a class="close" onclick="popupToggle()"><img src="close.png"></a>
+            </div>
 
         </header>
 
@@ -61,87 +62,19 @@
         <!-- Conteúdo -->
         <section class="content">
 
-            <div class="content_register">
+            <div class="content_enter">
+                <span>Quanto maior o acesso, mais atividade!</span>
 
-                <form action="#" method="post">
-                    <fieldset>
-                        <fieldset class="grupo">
-                            <div class="campo">
-                                <label for="nome">Código</label>
-                                <input type="text" id="codigo" name="nome" style="width: 5em" value="">
-                            </div>
-                            <div class="campo">
-                                <label for="unidade">Unidade</label>
-                                <select name="unidade" id="unidade">
-                                    <option value="DH Fitness">DH Fitness</option>
-                                    <option value="DH Fitness">DH Fitness</option>
-                                </select>
-                            </div>
-                            <div class="campo">
-                                <label for="nome">Matricula</label>
-                                <input type="text" id="matricual" required="required" name="matricula" style="width: 10em" value="">
-                            </div>
-                            <div class="campo">
-                                <label for="nome">Nome</label>
-                                <input type="text" id="nome" required="required" name="nome" style="width: 15em" value="">
-                            </div>
-                            <div class="campo">
-                                <label for="nome">Sobrenome</label>
-                                <input type="text" id="sobrenome" required="required" name="sobrenome" style="width: 11em" value="">
-                            </div>
-                        </fieldset>
-                        <fieldset>
-                            <fieldset class="grupo">
-                                <div class="campo">
-                                    <label for="nome">Nascimento </label>
-                                    <input id="date" required="required" type="date">
-                                </div>
-                                <div class="campo">
-                                    <label for="snome">Data de Cadastro</label>
-                                    <input id="Cadastro" required="required" type="date">
-                                </div>
-                                <div class="campo">
-                                    <label for="nome">CPF</label>
-                                    <input type="text" id="CPF" required="required" name="nascimento" style="width: 10em" value="">
-                                </div>
-                                <div class="campo">
-                                    <label for="nome">RG</label>
-                                    <input type="text" id="RG" required="required" name="endereco" style="width: 19em" value="">
-                                </div>
-                            </fieldset>
-                        <div class="campo">
-                            <label>Sexo</label>
-                            <label>
-                                <input type="radio" required="required" name="sexo" value="masculino"> Masculino
-                            </label>
-                            <label>
-                                <input type="radio" required="required" name="sexo" value="feminino"> Feminino
-                            </label>
-                        </div>
-                        <div class="campo">
-                            <label for="email">E-mail</label>
-                            <input type="text" id="email" required="required" name="email" style="width: 20em" value="">
-                        </div>
-                        <div class="campo">
-                            <label for="telefone">Telefone</label>
-                            <input type="text" id="telefone" required="required" name="telefone" style="width: 10em" value="">
-                        </div>
-                        <fieldset class="grupo">
-                            <div class="campo">
-                                <label for="cidade">Cidade</label>
-                                <input type="text" id="cidade" required="required" name="cidade" style="width: 10em" value="">
-                            </div>
-                            <div class="campo">
-                                <label for="estado">Estado</label>
-                                <select name="estado" id="estado">
-                                    <option value="">SP</option>
-                                </select>
-                            </div>
-                        </fieldset>
-                        <button type="submit" name="submit">Enviar</button>
-                    </fieldset>
-                </form>
-
+                <ul>
+                    <li><i class="far fa-calendar-alt"></i>Agendamento</li>
+                    <li><i class="fas fa-wifi"></i>Wi-Fi</li>
+                    <li><i class="fas fa-hand-holding-medical"></i>DH Care</li>
+                    <li><i class="fas fa-tshirt"></i>Armário</li>
+                    <li><i class="far fa-clipboard"></i>Avaliação</li>
+                    <li><i class="far fa-clock"></i>Malhação Express</li>
+                    <li><i class="fas fa-utensils"></i>DH Light</li>
+                    <li><i class="fas fa-car-side"></i>Estacionamento</li>
+                </ul>
             </div>
             
 
@@ -226,7 +159,7 @@
                         <li><a href="#">Central de Ajuda</a></li>
                         <li><a href="#">Fale Conosco</a></li>
                         <li><a href="#">Portal de Privacidade</a></li>
-                        <li><a href="#">Pandemia</a></li>
+                        <li><a href="#">COVID-19</a></li>
                     </ul>
                 </div>
 
@@ -251,10 +184,10 @@
                 <div>
                     <h4>Siga a DH Fitness</h4>
                     <ul>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Youtube</a></li>
-                        <li><a href="#">Twitter</a></li>
+                        <li><i class="fab fa-facebook-square"></i><a href="#">Facebook</a></li>
+                        <li><i class="fab fa-instagram"></i><a href="#">Instagram</a></li>
+                        <li><i class="fab fa-youtube"></i><a href="#">Youtube</a></li>
+                        <li><i class="fab fa-twitter"></i><a href="#">Twitter</a></li>
                     </ul>
                 </div>
 
@@ -278,13 +211,9 @@
         </footer>
 
         <script>
-            function toggle_right_area_login() {
-                const toggleLogin = document.querySelector('.right_area_login');
-                toggleLogin.classList.toggle('activeLogin');
-            }
-
-            function content_register() {
-                window.location.href = "register.html";
+            function popupToggle() {
+                const popup = document.getElementById('popup');
+                popup.classList.toggle('active_popup');
             }
         </script>
         
