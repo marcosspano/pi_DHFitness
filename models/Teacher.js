@@ -18,6 +18,8 @@ module.exports = (Sequelize, DataType) => {
             type: DataType.STRING,
             allowNull: false
           },
+          active: DataType.BOOLEAN,
+          deleted: DataType.BOOLEAN,
           createdAt: {
             type: DataType.DATE
           },

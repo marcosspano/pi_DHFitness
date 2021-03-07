@@ -16,6 +16,14 @@ module.exports = {
         type: Sequelize.FLOAT,
         allowNull: false
       },
+      active: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: true
+      },
+      deleted: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false
+      },
       createdAt: {
         type: Sequelize.DATE
       },

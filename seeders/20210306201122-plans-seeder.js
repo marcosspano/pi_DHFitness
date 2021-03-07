@@ -15,6 +15,8 @@ module.exports = {
     }, {
       title: 'Total 300',
       price: 300,
+      active: true,
+      deleted: false,
       createdAt: new Date(),
       updatedAt: new Date()
     }
