@@ -351,6 +351,23 @@ label #sidebar_btn:hover {
     color: #FFF;
 }
 
+.content .students_filter {
+    display: inline-block;
+    outline: hidden;
+    padding: 20px;
+}
+
+.content .students_filter select {
+    width: 300px;
+    border-radius: 5px;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+}
+
+.content .students_filter input {
+    border: none;
+    border-radius: 5px;
+}
+
 #check:checked ~ .content {
     margin-left: 60px;
 }
