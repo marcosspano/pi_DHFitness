@@ -1,0 +1,55 @@
+<%- include('./partials/head'); %>
+
+    <body> 
+
+        <input type="checkbox" checked id="check">
+
+        <header>
+            
+            <label for="check">
+                <i class="fas fa-bars" id="sidebar_btn"></i>
+            </label>
+
+            <div class="left_area">
+                <h3>DH <span>Fitness</span></h3>
+            </div>
+
+            <div class="right_area">
+                <span class="right_area_profile" onclick="toggle_right_area_menu();"></span>
+                <% if (typeof user !== "undefined") { %>
+                    <span><%= user.full_name %></span>
+                <% } %>
+            </div>
+
+            <div class="right_area_menu">
+                <h3>Plano Smart<br><span>Matrícula: 1945781</span></h3>
+                <ul>
+                    <li><i class="far fa-user-circle"></i><a href="#">Editar Perfil</a></li>
+                    <li><i class="fas fa-sign-out-alt"></i>><a href="/users/logout">Sair</a></li>
+                </ul>
+            </div>
+
+        </header>
+
+        <!--Menu Lateral -->
+        <%- include('./partials/sidebar'); %>
+
+        <!-- Conteúdo -->
+        <section class="content">
+
+        </section>
+
+   
+        <!-- Rodapé -->
+        <%- include('./partials/footer'); %> 
+
+        <script>
+            function toggle_right_area_menu() {
+                const toggleMenu = document.querySelector('.right_area_menu');
+                toggleMenu.classList.toggle('activeMenu');
+            }
+        </script>
+        
+    </body>
+
+</html>

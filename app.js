@@ -3,18 +3,26 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const session = require('express-session');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var classesRouter = require('./routes/classes');
 var plansRouter = require('./routes/plans');
 var teachersRouter = require('./routes/teachers');
+var studentsRouter = require('./routes/students');
 
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+app.use(session({
+  secret: "pi_DHFitness",
+  resave: true,
+  saveUninitialized: true
+}))
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -27,6 +35,7 @@ app.use('/users', usersRouter);
 app.use('/classes', classesRouter);
 app.use('/plans', plansRouter);
 app.use('/teachers', teachersRouter);
+app.use('/students', studentsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

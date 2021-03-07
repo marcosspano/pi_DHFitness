@@ -16,14 +16,14 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
-      specialty: {
+      speciality: {
         type: Sequelize.STRING,
         allowNull: false
       },
       createdAt: {
         type: Sequelize.DATE
       },
-      updateAt: {
+      updatedAt: {
         type: Sequelize.DATE
       }
     });
