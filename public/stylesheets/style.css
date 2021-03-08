@@ -354,22 +354,103 @@ label #sidebar_btn:hover {
 .content .students_filter {
     display: inline-block;
     outline: hidden;
-    padding: 20px;
+    padding: 0 20px;
+    width: 100%;
+    margin-left: 280px;
+    transition: 0.5s;
+    transition-property: margin-left;
 }
 
 .content .students_filter select {
-    width: 300px;
+    min-width: 300px;
     border-radius: 5px;
     box-shadow: 0 25px 45px rgba(0,0,0,0.1);
 }
 
-.content .students_filter input {
-    border: none;
+.content .popup_students_register {
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    font-size: 15px;
+    margin-left: 40%;
+    margin-top: 5px;
+    top: -100%;
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    transition: 0.5s;
+    transition-property: margin-left;
+    visibility: hidden;
+    box-shadow: rgba(0,0,0,0.8);
+}
+
+#popup_students_register.active_popup_students_register {
+    visibility: visible;
+    top: 20%;
+    transition: 0.5s
+}
+
+.content .popup_students_register h3 {
+    padding: 0 20px;
+}
+
+.content .popup_students_register .inputStudents {
     border-radius: 5px;
+    padding: 0 20px;
+}
+
+.content .popup_students_register .inputStudents select {
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+.content .popup_students_register .inputStudents input[type="text"] {
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.2);
+    outline: none;
+}
+
+.content .popup_students_register .inputStudents input[type="email"] {
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.2);
+    outline: none;
+}
+
+.content .popup_students_register .inputStudents input[type="submit"] {
+    margin: 30px 0;
+}
+
+.content .popup_students_register .inputStudents input[type="reset"] {
+    margin: 30px 0;
+}
+
+.dados_students {
+    background: #fff;
+    width:450px;
+    height: 200px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dados_students span {
+    width: 100%;
+    font-size: 15px;
+    margin: 10px 20px;
 }
 
 #check:checked ~ .content {
     margin-left: 60px;
+}
+
+#check:checked ~ .content .students_filter {
+    margin-left: 30px;
+}
+
+#check:checked ~ .content .popup_students_register {
+    margin-left: 35%;
 }
 
 #check {

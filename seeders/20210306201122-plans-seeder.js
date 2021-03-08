@@ -5,11 +5,15 @@ module.exports = {
     return queryInterface.bulkInsert('Plans', [{
       title: 'Basic 100',
       price: 100,
+      active: true,
+      deleted: false,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
       title: 'Smart 200',
       price: 200,
+      active: true,
+      deleted: false,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {

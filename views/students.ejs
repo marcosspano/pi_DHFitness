@@ -36,31 +36,84 @@
 
             <!-- Conteúdo -->
             <section class="content">
+
                 <div class="students_filter">
-                    <select name="full_name_students">
-                        <option value="nome">Nome do Aluno</option>
-                        <% students.forEach(student => { %>
-                            <option value="<%= student.id %>"><%= student.full_name %></option>
-                        <% }) %>
-                    </select>
 
-                    <select name="plans_filter">
-                        <option value="plano">Escolha o Plano</option>
-                        <% plans.forEach(plan => { %>
-                            <option value="<%= plan.id %>"><%= plan.title %></option>
-                        <% }) %>
-                    </select>
+                    <h2>Controle de Alunos</h2>
 
-                    <select name="teachers_filter">
-                        <option value="aula">Escolha a Aula</option>
-                        <% teachers.forEach(teacher => { %>
-                            <option value="<%= teacher.id %>"><%= teacher.speciality %></option>
-                        <% }) %>
-                    </select>
+                    <form action="/students/listar" method="POST">
+                        <select name="full_name_students" id="full_name_students" onload="reload_dados_students();">
+                            <option value="nome">Nome do Aluno</option>
+                            <% students.forEach(student => { %>
+                                <option value="<%= student.id %>"><%= student.full_name %></option>
+                            <% }) %>
+                        </select>
 
-                    <input type="button" value="Aplicar">
+                        <input type="submit" value="Pesquisar">
+
+                        <input type="button" value="+" onclick="toggle_popup_students_register();">
+
+                        <input type="button" value="Editar">
+                    </form>
+
+                    <div class="dados_students" id="dados_students">
+                        <span><strong>E-Mail: </strong><%= dado_Student.email %></span>
+                        <span><strong>Plano: </strong><%= dado_Student.title %></span>
+                        <span><strong>Aula: </strong><%= dado_Student.speciality %></span>
+                        <span><strong>Professor: </strong><%= dado_Student.full_name %></span>
+                    </div>
 
                 </div>
+
+
+                
+                
+                    <div class="popup_students_register" id="popup_students_register">
+
+                            <form action="/students/registrar" method="POST">
+                            <h3>Cadastro de Alunos</h3>
+
+                            <div class="inputStudents">
+                                <label for ="nomeStudents">Nome Completo:</label>
+                                <input type="text" name="nomeStudents" id="nomeStudents" placeholder="Nome Completo do Aluno">
+                            </div>
+
+                            <div class="inputStudents">
+                                <label for="emailStudents">E-mail:</label>
+                                <input type="email" name="emailStudents" id="emailStudents" placeholder="Entre com E-Mail">
+                            </div>
+
+                            <div class="inputStudents">
+                                <label for="full_plan_students">Plano: 
+                                    <select name="full_plan_students" id="full_plan_students">
+                                        <option value="plano" id="plano">Escolha o Plano</option>
+                                        <% plans.forEach(plan => { %>
+                                            <option value="<%= plan.id %>" id="<%= plan.id %>"><%= plan.title %></option>
+                                        <% }) %>
+                                    </select>
+                                </label>
+
+                                <label for="full_teachers_students">Modalidade: 
+                                    <select name="full_teachers_students" id="full_teachers_students">
+                                        <option value="modalidade" id="modalidade">Modalidade</option>
+                                        <% teachers.forEach(teacher => { %>
+                                            <option value="<%= teacher.id %>" id="<%= teacher.id %>"><%= teacher.speciality %></option>
+                                        <% }) %>
+                                    </select>
+                                </label>
+                            </div>
+
+
+
+                            <div class="inputStudents">
+                                <input type="submit" value="Cadastrar">
+                                <input type="reset" value="Cancelar" onclick="toggle_popup_students_register();">
+                            </div>   
+                            
+                        </form>
+                    </div>
+
+
             </section>
 
     <!-- Rodapé -->
@@ -71,6 +124,16 @@
             const toggleMenu = document.querySelector('.right_area_menu');
             toggleMenu.classList.toggle('activeMenu');
         }
+
+        function toggle_popup_students_register() {
+            const toggleRegister = document.querySelector('.popup_students_register')
+            toggleRegister.classList.toggle('active_popup_students_register');
+        }
+
+        function reload_dados_students() {
+            document.getElementById('dados_students').innerHTML.reload;
+        }
+
     </script>
     
 </body>
