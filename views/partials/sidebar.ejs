@@ -3,14 +3,13 @@
 <% if (typeof user == "undefined") { %>
     <a href="#"><i class="fas fa-home"></i><span>Home</span></a>
     <a href="#about"><i class="fas fa-info-circle"></i><span>Sobre</span></a>
-    <a href="#unity"><i class="fab fa-unity"></i><span>Unidades</span></a>
     <a href="#plans"><i class="fas fa-donate"></i><span>Planos</span></a>
     <a href="#"><i class="fas fa-question-circle"></i><span>Ajuda</span></a>
 
 <% } else if ( user.level == 5 ) { %>
 
-    <a href="/students/listar"><i class="fas fa-user"></i><span>Alunos</span></a>
-    <a href="#"><i class="fas fa-chalkboard-teacher"></i><span>Professores</span></a>
+    <a href="/students/listar"><i class="fas fa-user"></i><span>Membros</span></a>
+    <a href="#"><i class="fas fa-chalkboard-teacher"></i><span>Instrutores</span></a>
     <a href="#"><i class="fas fa-dumbbell"></i><span>Aulas</span></a>
     <a href="#"><i class="fas fa-question-circle"></i><span>Suporte</span></a>
     <a href="/users/logout"><i class="fas fa-sign-out-alt"></i><span>Sair</span></a>
