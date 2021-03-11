@@ -6,6 +6,10 @@ module.exports = {
     },
 
     cp (req, res, next) {
+        if(!req.session.user){
+            res.redirect('/');
+          }
+
         res.render('cp', { user: req.session.user });
     },
 
