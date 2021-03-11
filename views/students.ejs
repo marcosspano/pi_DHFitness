@@ -29,9 +29,31 @@
 
     <!--Menu Lateral -->
     <%- include('./partials/sidebar'); %>
+
             <!-- Conteúdo -->
             <section class="content">
-                <div class="students_filter">
+
+                <div class="cp_main">
+
+                    <div class="cp_banner">
+                        <h1>DH Fitness</h1>
+                    </div>
+    
+                    <div class="cp_content">
+                        <div class="cp_card cp_member-card">
+                            <a onclick="popupToggle()">
+                                <h2>Membros</h2>
+                            </a>
+                        </div>
+                        <div class="cp_card cp_instructor-card">
+                            <a href="#"><h2>Instrutores</h2></a>
+                        </div>
+                    </div>
+    
+                </div>
+
+                <!-- Controle de Alunos -->
+                <div class="students_filter" id="students_filter">
                     <h2>Controle de Alunos</h2>
                     <form action="/students/listar" method="POST">
                         <select name="full_name_students" id="full_name_students" onload="reload_dados_students();">
@@ -56,7 +78,10 @@
 
                     </div>
 
+                    <a class="close" onclick="popupToggle()"><img src="/images/close.png"></a>
+
                 </div>
+                <!-- Fim Controle de Alunos-->
                
                 <!--Cadastro dos Alunos-->
                     <div class="popup_students_register" id="popup_students_register">
@@ -147,9 +172,12 @@
                         <input type="reset" value="Cancela" onclick="toggle_popup_students_edit();">
                     </div>   
                     
-                </form>
-            </div>
-        <!--Fim da Edição dos Alunos-->
+                    </form>
+                </div>
+                <!--Fim da Edição dos Alunos-->
+
+                
+
             </section>
 
     <!-- Rodapé -->
@@ -160,6 +188,13 @@
             const toggleMenu = document.querySelector('.right_area_menu');
             toggleMenu.classList.toggle('activeMenu');
         }
+
+        
+         function popupToggle() {
+            const popup = document.getElementById('students_filter');
+             popup.classList.toggle('active_popup');
+        }
+        
 
         function toggle_popup_students_register() {
             const toggleRegister = document.querySelector('.popup_students_register')

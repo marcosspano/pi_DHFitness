@@ -100,17 +100,21 @@ textarea:-moz-placeholder { color: #FFF; }
 }
 
 .right_area_menu {
+    display: grid;
+    grid-template-columns: 1fr;
     position: absolute;
     top: 80px;
     right: 50px;
     padding: 10px 20px;
-    background: #FFF;
+    background: #f5f5f5;
     width: 200px;
     box-sizing: 0 5px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px -2px rgba(0,0,0,0.4);
     border-radius: 10px;
     transition: 0.5s;
     visibility: hidden;
     opacity: 0;
+    z-index: 9999;
 }
 
 .right_area_menu.activeMenu {
@@ -126,7 +130,7 @@ textarea:-moz-placeholder { color: #FFF; }
     right: 114px;
     width: 20px;
     height: 20px;
-    background: #FFF;
+    background: #f5f5f5;
     transform: rotate(45deg);
 }
 
@@ -352,13 +356,25 @@ label #sidebar_btn:hover {
 }
 
 .content .students_filter {
-    display: inline-block;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    position: fixed;
     outline: hidden;
     padding: 0 20px;
-    width: 100%;
-    margin-left: 280px;
+    top: 15%;
+    width: 60vw;
+    height: 70vh;
+    margin-left: 250px;
     transition: 0.5s;
-    transition-property: margin-left;
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 6px -1px #000;
+    z-index: 4;
+}
+
+#students_filter.active_popup {
+    visibility: hidden;
+    top: -100%;
 }
 
 .content .students_filter select {
@@ -381,6 +397,7 @@ label #sidebar_btn:hover {
     transition: 0.5s;
     transition-property: margin-left;
     visibility: hidden;
+    z-index: 5;
     box-shadow: 0 2px 6px -1px #000;
 }
 
@@ -441,6 +458,7 @@ label #sidebar_btn:hover {
     transition: 0.5s;
     transition-property: margin-left;
     visibility: hidden;
+    z-index: 5;
     box-shadow: 0 2px 6px -1px #000;
 }
 
@@ -498,11 +516,10 @@ label #sidebar_btn:hover {
 /* Fim do CSS para Edição de Dados dos Alunos */
 
 .dados_students {
-    background: #fff;
     width:450px;
     height: 200px;
-    padding: 10px;
-    margin: 10px 0;
+    padding: 5px;
+    margin: 5px 0;
     border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
@@ -519,7 +536,7 @@ label #sidebar_btn:hover {
 }
 
 #check:checked ~ .content .students_filter {
-    margin-left: 30px;
+    margin-left: 200px;
 }
 
 #check:checked ~ .content .popup_students_register {
@@ -757,6 +774,10 @@ label #sidebar_btn:hover {
     background-repeat: no-repeat;
 }
 
+.cp_member-card a {
+    cursor: pointer;
+}
+
 /* FINAL CP */
 
 /* CARD */
@@ -784,6 +805,7 @@ label #sidebar_btn:hover {
 }
 
 /* FIM CARD */
+
 
 .about {
     padding-top: 70px;
