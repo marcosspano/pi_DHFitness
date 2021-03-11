@@ -7,4 +7,6 @@ router.get('/', IndexController.index);
 
 router.get('/cp', IndexController.cp);
 
+router.post('/contato', IndexController.contato);
+
 module.exports = router;

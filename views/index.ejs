@@ -27,6 +27,7 @@
                 <h3>Plano Smart<br><span>Matrícula: 1945781</span></h3>
                 <ul>
                     <li><i class="far fa-user-circle"></i><a href="#">Editar Perfil</a></li>
+                    <li><i class="fas fa-envelope"></i><a href="#">Mensagens</a></li>
                     <li><i class="fab fa-windows"></i><a href="/cp">Painel de Controle</a></li>
                     <li><i class="fas fa-sign-out-alt"></i>><a href="/users/logout">Sair</a></li>
                 </ul>
@@ -81,32 +82,32 @@
             </div>
 
             <div class="form_help">
-                <form>
+                <form action="/contato" method="POST">
                     <div class="area_help">
 
                         <h3>Em que posso ajudar?</h3>
 
                         <label for="nome_help">
                             Nome:
-                            <input type="text" id="nome_help" placeholder="Seu nome aqui..." />
+                            <input type="text" name="name_help" id="name_help" placeholder="Seu nome aqui..." />
                         </label>
                     </div>
 
                     <div class="area_help">
                         <label for="email_help">
                             E-Mail:
-                            <input type="email" id="email_help" placeholder="Seu email aqui..." />
+                            <input type="email" name="email_help" id="email_help" placeholder="Seu email aqui..." />
                         </label>
                     </div>
 
                     <div class="area_help">
-                        <select>
-                            <option value="">Sugestão</option>
-                            <option value="">Reclamação</option>
-                            <option value="">Dúvidas</option>
+                        <select name="subject_help" id="subject_help">
+                            <option value="Sugestão">Sugestão</option>
+                            <option value="Reclamação">Reclamação</option>
+                            <option value="Dúvidas">Dúvidas</option>
                         </select>
 
-                        <textarea name="" id="" cols="30" rows="7" maxlength="1000" placeholder="Digite até 1000 caracteres..."></textarea>
+                        <textarea name="text_help" id="text_help" cols="30" rows="7" maxlength="1000" placeholder="Digite até 1000 caracteres..."></textarea>
                     </div>
 
                     <div class="submit_help">
