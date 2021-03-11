@@ -15,7 +15,21 @@
             </div>
 
             <div class="right_area">
-                <span onclick="popupToggle()" class="login_btn">Entrar</span>
+                <% if (typeof user !== "undefined") { %>
+                    <span class="right_area_profile" onclick="toggle_right_area_menu();"></span>
+                    <span><%= user.full_name %></span>
+                <% } else { %>
+                    <span onclick="popupToggle()" class="login_btn">Entrar</span>
+                <% } %>
+            </div>
+
+            <div class="right_area_menu">
+                <h3>Plano Smart<br><span>Matrícula: 1945781</span></h3>
+                <ul>
+                    <li><i class="far fa-user-circle"></i><a href="#">Editar Perfil</a></li>
+                    <li><i class="fab fa-windows"></i><a href="/cp">Painel de Controle</a></li>
+                    <li><i class="fas fa-sign-out-alt"></i>><a href="/users/logout">Sair</a></li>
+                </ul>
             </div>
 
             <!-- Login -->
@@ -41,7 +55,12 @@
         </header>
 
         <!--Menu Lateral -->
-        <%- include('./partials/sidebar'); %>
+        <div class="sidebar">
+            <a href="#"><i class="fas fa-home"></i><span>Home</span></a>
+            <a href="#about"><i class="fas fa-info-circle"></i><span>Sobre</span></a>
+            <a href="#plans"><i class="fas fa-donate"></i><span>Planos</span></a>
+            <a href="#"><i class="fas fa-question-circle"></i><span>Ajuda</span></a>
+        </div>
 
         <!-- Conteúdo -->
         <section class="content">
@@ -88,6 +107,11 @@
             function popupToggle() {
                 const popup = document.getElementById('popup');
                 popup.classList.toggle('active_popup');
+            }
+
+            function toggle_right_area_menu() {
+                const toggleMenu = document.querySelector('.right_area_menu');
+                toggleMenu.classList.toggle('activeMenu');
             }
         </script>
         
