@@ -59,7 +59,7 @@
             <a href="#"><i class="fas fa-home"></i><span>Home</span></a>
             <a href="#about"><i class="fas fa-info-circle"></i><span>Sobre</span></a>
             <a href="#plans"><i class="fas fa-donate"></i><span>Planos</span></a>
-            <a href="#"><i class="fas fa-question-circle"></i><span>Ajuda</span></a>
+            <a href="#" onclick="toggle_form_help();"><i class="fas fa-question-circle"></i><span>Ajuda</span></a>
         </div>
 
         <!-- Conteúdo -->
@@ -78,6 +78,44 @@
                     <li><i class="fas fa-utensils"></i>DH Light</li>
                     <li><i class="fas fa-car-side"></i>Estacionamento</li>
                 </ul>
+            </div>
+
+            <div class="form_help">
+                <form>
+                    <div class="area_help">
+
+                        <h3>Em que posso ajudar?</h3>
+
+                        <label for="nome_help">
+                            Nome:
+                            <input type="text" id="nome_help" placeholder="Seu nome aqui..." />
+                        </label>
+                    </div>
+
+                    <div class="area_help">
+                        <label for="email_help">
+                            E-Mail:
+                            <input type="email" id="email_help" placeholder="Seu email aqui..." />
+                        </label>
+                    </div>
+
+                    <div class="area_help">
+                        <select>
+                            <option value="">Sugestão</option>
+                            <option value="">Reclamação</option>
+                            <option value="">Dúvidas</option>
+                        </select>
+
+                        <textarea name="" id="" cols="30" rows="7" maxlength="1000" placeholder="Digite até 1000 caracteres..."></textarea>
+                    </div>
+
+                    <div class="submit_help">
+                        <input type="submit" value="Enviar" />
+                        <input type="reset" value="Cancelar" onclick="toggle_form_help();" />
+                    </div>
+
+
+                </form>
             </div>
             
 
@@ -112,6 +150,11 @@
             function toggle_right_area_menu() {
                 const toggleMenu = document.querySelector('.right_area_menu');
                 toggleMenu.classList.toggle('activeMenu');
+            }
+
+            function toggle_form_help() {
+                const toggleHelp = document.querySelector('.form_help');
+                toggleHelp.classList.toggle('activeHelp');
             }
         </script>
         

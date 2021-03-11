@@ -338,6 +338,68 @@ label #sidebar_btn:hover {
     transition-property: margin-left;
 }
 
+.form_help {
+    display: inline-block;
+    position: fixed;
+    width: 40vw;
+    height: 60vh;
+    background-color: #f5f5f5;
+    padding: 20px 0px 20px 20px;
+    margin-left: 350px;
+    margin-top: 10px;
+    top: -100%;
+    visibility: hidden;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.form_help.activeHelp {
+    visibility: visible;
+    top: 10%;
+}
+
+#check:checked ~ .content .form_help {
+    margin-left: 300px;
+}
+
+.content .form_help .area_help {
+    font-size: 14px;
+    padding: 6px;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.form_help form input[type="text"] {
+    outline: none;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.form_help form input[type="email"] {
+    outline: none;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.form_help form textarea {
+    outline: none;
+    border: 1px solid #ccc;
+    width: 137%;
+    resize: none;
+}
+
+.form_help form select {
+    outline: none;
+    margin-bottom: 15px;
+}
+
+.form_help .submit_help {
+    display: flex;
+    margin: 20px;
+    justify-content: space-around;
+    width: 150px;
+}
+
 .content .content_card {
     background: #182B3c;
     width: 180px;
